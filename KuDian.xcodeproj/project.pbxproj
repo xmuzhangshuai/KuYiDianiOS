@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D360DCB1D0683270069C77E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DCA1D0683270069C77E /* CoreLocation.framework */; };
+		3D360DCD1D0683350069C77E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DCC1D0683350069C77E /* QuartzCore.framework */; };
+		3D360DCF1D0683420069C77E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DCE1D0683420069C77E /* OpenGLES.framework */; };
+		3D360DD11D0683560069C77E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DD01D0683560069C77E /* SystemConfiguration.framework */; };
+		3D360DD31D0683620069C77E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DD21D0683620069C77E /* CoreGraphics.framework */; };
+		3D360DD51D06836F0069C77E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DD41D06836F0069C77E /* Security.framework */; };
+		3D360DD71D0683840069C77E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DD61D0683840069C77E /* libsqlite3.0.tbd */; };
+		3D360DD91D0683950069C77E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DD81D0683950069C77E /* CoreTelephony.framework */; };
+		3D360DDB1D0683A00069C77E /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D360DDA1D0683A00069C77E /* libstdc++.6.0.9.tbd */; };
+		3D360E2D1D07AECF0069C77E /* KDAccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D360E2C1D07AECF0069C77E /* KDAccessViewController.m */; };
+		3D58670D1D003D2B00A7E007 /* KDADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D58670C1D003D2B00A7E007 /* KDADScrollView.m */; };
+		3D5867551D015BA900A7E007 /* KDMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5867541D015BA800A7E007 /* KDMainCollectionViewCell.m */; };
+		3D5867581D01779C00A7E007 /* KDStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5867571D01779C00A7E007 /* KDStoreViewController.m */; };
+		3D58675B1D0177BF00A7E007 /* KDMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D58675A1D0177BF00A7E007 /* KDMapViewController.m */; };
+		3D58675E1D01787600A7E007 /* KDMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D58675D1D01787600A7E007 /* KDMarkViewController.m */; };
+		3D5867611D01797D00A7E007 /* KDLaProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5867601D01797D00A7E007 /* KDLaProductViewController.m */; };
+		3D5867641D0179E500A7E007 /* KDChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5867631D0179E500A7E007 /* KDChartsViewController.m */; };
+		3D5867671D017C7B00A7E007 /* KDStoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5867661D017C7B00A7E007 /* KDStoreDetailViewController.m */; };
+		3D5DB9221CFD8437006A445B /* KDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5DB9211CFD8437006A445B /* KDMainViewController.m */; };
+		3D9A0B411CFD265B0098DF1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B401CFD265B0098DF1B /* main.m */; };
+		3D9A0B441CFD265B0098DF1B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B431CFD265B0098DF1B /* AppDelegate.mm */; };
+		3D9A0B4A1CFD265C0098DF1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A0B481CFD265C0098DF1B /* Main.storyboard */; };
+		3D9A0B4C1CFD265C0098DF1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A0B4B1CFD265C0098DF1B /* Assets.xcassets */; };
+		3D9A0B4F1CFD265C0098DF1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A0B4D1CFD265C0098DF1B /* LaunchScreen.storyboard */; };
+		3D9A0B5A1CFD265C0098DF1B /* KuDianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B591CFD265C0098DF1B /* KuDianTests.m */; };
+		3D9A0B651CFD265C0098DF1B /* KuDianUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B641CFD265C0098DF1B /* KuDianUITests.m */; };
+		3D9A0B7C1CFD37670098DF1B /* KDLeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B7B1CFD37670098DF1B /* KDLeadViewController.m */; };
+		3D9A0B801CFD37E40098DF1B /* KDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B7F1CFD37E40098DF1B /* KDLoginViewController.m */; };
+		8FA02E51A55D65AEDA71CF64 /* libPods-KuDian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78992B65C02EF581C14B071D /* libPods-KuDian.a */; };
+		C02A707D1D045E3200473D07 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02A707C1D045E3200473D07 /* InfoViewController.m */; };
+		C0AC99551D072DC7007D9E70 /* KDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AC99541D072DC7007D9E70 /* KDLoginViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D9A0B561CFD265C0098DF1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D9A0B341CFD265B0098DF1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D9A0B3B1CFD265B0098DF1B;
+			remoteInfo = KuDian;
+		};
+		3D9A0B611CFD265C0098DF1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D9A0B341CFD265B0098DF1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D9A0B3B1CFD265B0098DF1B;
+			remoteInfo = KuDian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D360DCA1D0683270069C77E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D360DCC1D0683350069C77E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3D360DCE1D0683420069C77E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3D360DD01D0683560069C77E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D360DD21D0683620069C77E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D360DD41D06836F0069C77E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D360DD61D0683840069C77E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		3D360DD81D0683950069C77E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3D360DDA1D0683A00069C77E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		3D360E2B1D07AECF0069C77E /* KDAccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDAccessViewController.h; sourceTree = "<group>"; };
+		3D360E2C1D07AECF0069C77E /* KDAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDAccessViewController.m; sourceTree = "<group>"; };
+		3D58670B1D003D2B00A7E007 /* KDADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDADScrollView.h; sourceTree = "<group>"; };
+		3D58670C1D003D2B00A7E007 /* KDADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDADScrollView.m; sourceTree = "<group>"; };
+		3D5867531D015BA800A7E007 /* KDMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMainCollectionViewCell.h; sourceTree = "<group>"; };
+		3D5867541D015BA800A7E007 /* KDMainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMainCollectionViewCell.m; sourceTree = "<group>"; };
+		3D5867561D01779C00A7E007 /* KDStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDStoreViewController.h; sourceTree = "<group>"; };
+		3D5867571D01779C00A7E007 /* KDStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDStoreViewController.m; sourceTree = "<group>"; };
+		3D5867591D0177BF00A7E007 /* KDMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMapViewController.h; sourceTree = "<group>"; };
+		3D58675A1D0177BF00A7E007 /* KDMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMapViewController.m; sourceTree = "<group>"; };
+		3D58675C1D01787600A7E007 /* KDMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMarkViewController.h; sourceTree = "<group>"; };
+		3D58675D1D01787600A7E007 /* KDMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMarkViewController.m; sourceTree = "<group>"; };
+		3D58675F1D01797D00A7E007 /* KDLaProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLaProductViewController.h; sourceTree = "<group>"; };
+		3D5867601D01797D00A7E007 /* KDLaProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLaProductViewController.m; sourceTree = "<group>"; };
+		3D5867621D0179E500A7E007 /* KDChartsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDChartsViewController.h; sourceTree = "<group>"; };
+		3D5867631D0179E500A7E007 /* KDChartsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDChartsViewController.m; sourceTree = "<group>"; };
+		3D5867651D017C7B00A7E007 /* KDStoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDStoreDetailViewController.h; sourceTree = "<group>"; };
+		3D5867661D017C7B00A7E007 /* KDStoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDStoreDetailViewController.m; sourceTree = "<group>"; };
+		3D5DB9201CFD8437006A445B /* KDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMainViewController.h; sourceTree = "<group>"; };
+		3D5DB9211CFD8437006A445B /* KDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMainViewController.m; sourceTree = "<group>"; };
+		3D9A0B3C1CFD265B0098DF1B /* KuDian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuDian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D9A0B401CFD265B0098DF1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D9A0B421CFD265B0098DF1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D9A0B431CFD265B0098DF1B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		3D9A0B491CFD265C0098DF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D9A0B4B1CFD265C0098DF1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D9A0B4E1CFD265C0098DF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D9A0B501CFD265C0098DF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9A0B551CFD265C0098DF1B /* KuDianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuDianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D9A0B591CFD265C0098DF1B /* KuDianTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KuDianTests.m; sourceTree = "<group>"; };
+		3D9A0B5B1CFD265C0098DF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9A0B601CFD265C0098DF1B /* KuDianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuDianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D9A0B641CFD265C0098DF1B /* KuDianUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KuDianUITests.m; sourceTree = "<group>"; };
+		3D9A0B661CFD265C0098DF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9A0B781CFD33620098DF1B /* UISize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISize.h; sourceTree = "<group>"; };
+		3D9A0B7A1CFD37670098DF1B /* KDLeadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLeadViewController.h; sourceTree = "<group>"; };
+		3D9A0B7B1CFD37670098DF1B /* KDLeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLeadViewController.m; sourceTree = "<group>"; };
+		3D9A0B7E1CFD37E40098DF1B /* KDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoginViewController.h; sourceTree = "<group>"; };
+		3D9A0B7F1CFD37E40098DF1B /* KDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLoginViewController.m; sourceTree = "<group>"; };
+		78992B65C02EF581C14B071D /* libPods-KuDian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KuDian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02A707B1D045E3200473D07 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		C02A707C1D045E3200473D07 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		C0AC99541D072DC7007D9E70 /* KDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KDLoginViewController.xib; sourceTree = "<group>"; };
+		EC2E439D63746F4CD61583F8 /* Pods-KuDian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuDian.release.xcconfig"; path = "Pods/Target Support Files/Pods-KuDian/Pods-KuDian.release.xcconfig"; sourceTree = "<group>"; };
+		F530376F1E9013AF99F69DC5 /* Pods-KuDian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuDian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KuDian/Pods-KuDian.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D9A0B391CFD265B0098DF1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D360DDB1D0683A00069C77E /* libstdc++.6.0.9.tbd in Frameworks */,
+				3D360DD91D0683950069C77E /* CoreTelephony.framework in Frameworks */,
+				3D360DD71D0683840069C77E /* libsqlite3.0.tbd in Frameworks */,
+				3D360DD51D06836F0069C77E /* Security.framework in Frameworks */,
+				3D360DD31D0683620069C77E /* CoreGraphics.framework in Frameworks */,
+				3D360DD11D0683560069C77E /* SystemConfiguration.framework in Frameworks */,
+				3D360DCF1D0683420069C77E /* OpenGLES.framework in Frameworks */,
+				3D360DCD1D0683350069C77E /* QuartzCore.framework in Frameworks */,
+				3D360DCB1D0683270069C77E /* CoreLocation.framework in Frameworks */,
+				8FA02E51A55D65AEDA71CF64 /* libPods-KuDian.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9A0B521CFD265C0098DF1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9A0B5D1CFD265C0098DF1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038E22BF0E019C92DA81D05D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D360DDA1D0683A00069C77E /* libstdc++.6.0.9.tbd */,
+				3D360DD81D0683950069C77E /* CoreTelephony.framework */,
+				3D360DD61D0683840069C77E /* libsqlite3.0.tbd */,
+				3D360DD41D06836F0069C77E /* Security.framework */,
+				3D360DD21D0683620069C77E /* CoreGraphics.framework */,
+				3D360DD01D0683560069C77E /* SystemConfiguration.framework */,
+				3D360DCE1D0683420069C77E /* OpenGLES.framework */,
+				3D360DCC1D0683350069C77E /* QuartzCore.framework */,
+				3D360DCA1D0683270069C77E /* CoreLocation.framework */,
+				78992B65C02EF581C14B071D /* libPods-KuDian.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D9A0B331CFD265B0098DF1B = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B3E1CFD265B0098DF1B /* KuDian */,
+				3D9A0B581CFD265C0098DF1B /* KuDianTests */,
+				3D9A0B631CFD265C0098DF1B /* KuDianUITests */,
+				3D9A0B3D1CFD265B0098DF1B /* Products */,
+				67B6C5C375281E28D9A25FDF /* Pods */,
+				038E22BF0E019C92DA81D05D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D9A0B3D1CFD265B0098DF1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B3C1CFD265B0098DF1B /* KuDian.app */,
+				3D9A0B551CFD265C0098DF1B /* KuDianTests.xctest */,
+				3D9A0B601CFD265C0098DF1B /* KuDianUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D9A0B3E1CFD265B0098DF1B /* KuDian */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B791CFD37210098DF1B /* LeadView */,
+				3D9A0B741CFD32650098DF1B /* Login */,
+				3D9A0B731CFD2DCC0098DF1B /* Home */,
+				3D9A0B721CFD2C9B0098DF1B /* SideSlipe */,
+				3D9A0B421CFD265B0098DF1B /* AppDelegate.h */,
+				3D9A0B431CFD265B0098DF1B /* AppDelegate.mm */,
+				3D9A0B7D1CFD377D0098DF1B /* Other */,
+				3D9A0B4D1CFD265C0098DF1B /* LaunchScreen.storyboard */,
+				3D9A0B4B1CFD265C0098DF1B /* Assets.xcassets */,
+				3D9A0B501CFD265C0098DF1B /* Info.plist */,
+				3D9A0B3F1CFD265B0098DF1B /* Supporting Files */,
+				3D9A0B781CFD33620098DF1B /* UISize.h */,
+			);
+			path = KuDian;
+			sourceTree = "<group>";
+		};
+		3D9A0B3F1CFD265B0098DF1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B401CFD265B0098DF1B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D9A0B581CFD265C0098DF1B /* KuDianTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B591CFD265C0098DF1B /* KuDianTests.m */,
+				3D9A0B5B1CFD265C0098DF1B /* Info.plist */,
+			);
+			path = KuDianTests;
+			sourceTree = "<group>";
+		};
+		3D9A0B631CFD265C0098DF1B /* KuDianUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B641CFD265C0098DF1B /* KuDianUITests.m */,
+				3D9A0B661CFD265C0098DF1B /* Info.plist */,
+			);
+			path = KuDianUITests;
+			sourceTree = "<group>";
+		};
+		3D9A0B721CFD2C9B0098DF1B /* SideSlipe */ = {
+			isa = PBXGroup;
+			children = (
+				C02A707B1D045E3200473D07 /* InfoViewController.h */,
+				C02A707C1D045E3200473D07 /* InfoViewController.m */,
+			);
+			name = SideSlipe;
+			sourceTree = "<group>";
+		};
+		3D9A0B731CFD2DCC0098DF1B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3D5DB9201CFD8437006A445B /* KDMainViewController.h */,
+				3D5DB9211CFD8437006A445B /* KDMainViewController.m */,
+				3D5867531D015BA800A7E007 /* KDMainCollectionViewCell.h */,
+				3D5867541D015BA800A7E007 /* KDMainCollectionViewCell.m */,
+				3D58670B1D003D2B00A7E007 /* KDADScrollView.h */,
+				3D58670C1D003D2B00A7E007 /* KDADScrollView.m */,
+				3D5867561D01779C00A7E007 /* KDStoreViewController.h */,
+				3D5867571D01779C00A7E007 /* KDStoreViewController.m */,
+				3D5867651D017C7B00A7E007 /* KDStoreDetailViewController.h */,
+				3D5867661D017C7B00A7E007 /* KDStoreDetailViewController.m */,
+				3D5867591D0177BF00A7E007 /* KDMapViewController.h */,
+				3D58675A1D0177BF00A7E007 /* KDMapViewController.m */,
+				3D58675F1D01797D00A7E007 /* KDLaProductViewController.h */,
+				3D5867601D01797D00A7E007 /* KDLaProductViewController.m */,
+				3D58675C1D01787600A7E007 /* KDMarkViewController.h */,
+				3D58675D1D01787600A7E007 /* KDMarkViewController.m */,
+				3D5867621D0179E500A7E007 /* KDChartsViewController.h */,
+				3D5867631D0179E500A7E007 /* KDChartsViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		3D9A0B741CFD32650098DF1B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B7E1CFD37E40098DF1B /* KDLoginViewController.h */,
+				3D9A0B7F1CFD37E40098DF1B /* KDLoginViewController.m */,
+				C0AC99541D072DC7007D9E70 /* KDLoginViewController.xib */,
+				3D360E2B1D07AECF0069C77E /* KDAccessViewController.h */,
+				3D360E2C1D07AECF0069C77E /* KDAccessViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		3D9A0B791CFD37210098DF1B /* LeadView */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B7A1CFD37670098DF1B /* KDLeadViewController.h */,
+				3D9A0B7B1CFD37670098DF1B /* KDLeadViewController.m */,
+			);
+			name = LeadView;
+			sourceTree = "<group>";
+		};
+		3D9A0B7D1CFD377D0098DF1B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A0B481CFD265C0098DF1B /* Main.storyboard */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		67B6C5C375281E28D9A25FDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F530376F1E9013AF99F69DC5 /* Pods-KuDian.debug.xcconfig */,
+				EC2E439D63746F4CD61583F8 /* Pods-KuDian.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D9A0B3B1CFD265B0098DF1B /* KuDian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D9A0B691CFD265C0098DF1B /* Build configuration list for PBXNativeTarget "KuDian" */;
+			buildPhases = (
+				236FCCE3DD1D74E8963CEDCB /* 📦 Check Pods Manifest.lock */,
+				3D9A0B381CFD265B0098DF1B /* Sources */,
+				3D9A0B391CFD265B0098DF1B /* Frameworks */,
+				3D9A0B3A1CFD265B0098DF1B /* Resources */,
+				D610FA0D3F911B721CCB4148 /* 📦 Embed Pods Frameworks */,
+				56F937A85D9736522C019969 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KuDian;
+			productName = KuDian;
+			productReference = 3D9A0B3C1CFD265B0098DF1B /* KuDian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D9A0B541CFD265C0098DF1B /* KuDianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D9A0B6C1CFD265C0098DF1B /* Build configuration list for PBXNativeTarget "KuDianTests" */;
+			buildPhases = (
+				3D9A0B511CFD265C0098DF1B /* Sources */,
+				3D9A0B521CFD265C0098DF1B /* Frameworks */,
+				3D9A0B531CFD265C0098DF1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D9A0B571CFD265C0098DF1B /* PBXTargetDependency */,
+			);
+			name = KuDianTests;
+			productName = KuDianTests;
+			productReference = 3D9A0B551CFD265C0098DF1B /* KuDianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D9A0B5F1CFD265C0098DF1B /* KuDianUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D9A0B6F1CFD265C0098DF1B /* Build configuration list for PBXNativeTarget "KuDianUITests" */;
+			buildPhases = (
+				3D9A0B5C1CFD265C0098DF1B /* Sources */,
+				3D9A0B5D1CFD265C0098DF1B /* Frameworks */,
+				3D9A0B5E1CFD265C0098DF1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D9A0B621CFD265C0098DF1B /* PBXTargetDependency */,
+			);
+			name = KuDianUITests;
+			productName = KuDianUITests;
+			productReference = 3D9A0B601CFD265C0098DF1B /* KuDianUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D9A0B341CFD265B0098DF1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "黄明族";
+				TargetAttributes = {
+					3D9A0B3B1CFD265B0098DF1B = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L63SLRT7K3;
+					};
+					3D9A0B541CFD265C0098DF1B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3D9A0B3B1CFD265B0098DF1B;
+					};
+					3D9A0B5F1CFD265C0098DF1B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3D9A0B3B1CFD265B0098DF1B;
+					};
+				};
+			};
+			buildConfigurationList = 3D9A0B371CFD265B0098DF1B /* Build configuration list for PBXProject "KuDian" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D9A0B331CFD265B0098DF1B;
+			productRefGroup = 3D9A0B3D1CFD265B0098DF1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D9A0B3B1CFD265B0098DF1B /* KuDian */,
+				3D9A0B541CFD265C0098DF1B /* KuDianTests */,
+				3D9A0B5F1CFD265C0098DF1B /* KuDianUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D9A0B3A1CFD265B0098DF1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D9A0B4F1CFD265C0098DF1B /* LaunchScreen.storyboard in Resources */,
+				3D9A0B4C1CFD265C0098DF1B /* Assets.xcassets in Resources */,
+				3D9A0B4A1CFD265C0098DF1B /* Main.storyboard in Resources */,
+				C0AC99551D072DC7007D9E70 /* KDLoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9A0B531CFD265C0098DF1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9A0B5E1CFD265C0098DF1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		236FCCE3DD1D74E8963CEDCB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		56F937A85D9736522C019969 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KuDian/Pods-KuDian-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D610FA0D3F911B721CCB4148 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KuDian/Pods-KuDian-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D9A0B381CFD265B0098DF1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D58675B1D0177BF00A7E007 /* KDMapViewController.m in Sources */,
+				3D5867551D015BA900A7E007 /* KDMainCollectionViewCell.m in Sources */,
+				3D5867671D017C7B00A7E007 /* KDStoreDetailViewController.m in Sources */,
+				3D5867611D01797D00A7E007 /* KDLaProductViewController.m in Sources */,
+				3D5867641D0179E500A7E007 /* KDChartsViewController.m in Sources */,
+				3D9A0B441CFD265B0098DF1B /* AppDelegate.mm in Sources */,
+				3D9A0B801CFD37E40098DF1B /* KDLoginViewController.m in Sources */,
+				3D58670D1D003D2B00A7E007 /* KDADScrollView.m in Sources */,
+				C02A707D1D045E3200473D07 /* InfoViewController.m in Sources */,
+				3D5867581D01779C00A7E007 /* KDStoreViewController.m in Sources */,
+				3D58675E1D01787600A7E007 /* KDMarkViewController.m in Sources */,
+				3D5DB9221CFD8437006A445B /* KDMainViewController.m in Sources */,
+				3D9A0B7C1CFD37670098DF1B /* KDLeadViewController.m in Sources */,
+				3D360E2D1D07AECF0069C77E /* KDAccessViewController.m in Sources */,
+				3D9A0B411CFD265B0098DF1B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9A0B511CFD265C0098DF1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D9A0B5A1CFD265C0098DF1B /* KuDianTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9A0B5C1CFD265C0098DF1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D9A0B651CFD265C0098DF1B /* KuDianUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D9A0B571CFD265C0098DF1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D9A0B3B1CFD265B0098DF1B /* KuDian */;
+			targetProxy = 3D9A0B561CFD265C0098DF1B /* PBXContainerItemProxy */;
+		};
+		3D9A0B621CFD265C0098DF1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D9A0B3B1CFD265B0098DF1B /* KuDian */;
+			targetProxy = 3D9A0B611CFD265C0098DF1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D9A0B481CFD265C0098DF1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D9A0B491CFD265C0098DF1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D9A0B4D1CFD265C0098DF1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D9A0B4E1CFD265C0098DF1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D9A0B671CFD265C0098DF1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D9A0B681CFD265C0098DF1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D9A0B6A1CFD265C0098DF1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F530376F1E9013AF99F69DC5 /* Pods-KuDian.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_INPUT_FILETYPE = automatic;
+				INFOPLIST_FILE = KuDian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D9A0B6B1CFD265C0098DF1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2E439D63746F4CD61583F8 /* Pods-KuDian.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_INPUT_FILETYPE = automatic;
+				INFOPLIST_FILE = KuDian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3D9A0B6D1CFD265C0098DF1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KuDianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KuDian.app/KuDian";
+			};
+			name = Debug;
+		};
+		3D9A0B6E1CFD265C0098DF1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KuDianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KuDian.app/KuDian";
+			};
+			name = Release;
+		};
+		3D9A0B701CFD265C0098DF1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KuDianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KuDian;
+			};
+			name = Debug;
+		};
+		3D9A0B711CFD265C0098DF1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KuDianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KuDian;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D9A0B371CFD265B0098DF1B /* Build configuration list for PBXProject "KuDian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D9A0B671CFD265C0098DF1B /* Debug */,
+				3D9A0B681CFD265C0098DF1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D9A0B691CFD265C0098DF1B /* Build configuration list for PBXNativeTarget "KuDian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D9A0B6A1CFD265C0098DF1B /* Debug */,
+				3D9A0B6B1CFD265C0098DF1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D9A0B6C1CFD265C0098DF1B /* Build configuration list for PBXNativeTarget "KuDianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D9A0B6D1CFD265C0098DF1B /* Debug */,
+				3D9A0B6E1CFD265C0098DF1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D9A0B6F1CFD265C0098DF1B /* Build configuration list for PBXNativeTarget "KuDianUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D9A0B701CFD265C0098DF1B /* Debug */,
+				3D9A0B711CFD265C0098DF1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D9A0B341CFD265B0098DF1B /* Project object */;
+}

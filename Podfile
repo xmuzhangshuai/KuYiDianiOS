@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+target 'KuDian'
+pod 'AFNetworking'
+pod 'FMDB'
+pod 'MBProgressHUD'
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'BaiduMapKit'
