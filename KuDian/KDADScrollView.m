@@ -76,8 +76,6 @@
         self.direct.delegate = self;
         self.direct.pagingEnabled = YES;
         self.direct.frame = self.bounds;
-#warning 设置scrollview的颜色来调试
-        self.direct.backgroundColor = [UIColor grayColor];
         self.direct.scrollsToTop = NO;
         self.direct.contentOffset=CGPointMake(frame_width, 0);
         self.direct.showsHorizontalScrollIndicator = NO;
@@ -87,8 +85,8 @@
         self.pageVC=[[UIPageControl alloc]init];
         //设置轮播页码的位置
         self.pageVC.frame=CGRectMake(0,self.frame.size.height-30, self.frame.size.width, 30);
-        _pageVC.currentPageIndicatorTintColor = [UIColor blueColor];
-        _pageVC.pageIndicatorTintColor = [UIColor grayColor];
+        _pageVC.currentPageIndicatorTintColor = [UIColor colorWithRed:245.0/255 green:164.0/255 blue:160.0/255 alpha:1];
+        _pageVC.pageIndicatorTintColor = [UIColor colorWithRed:255.0/255 green:255.0/255 blue:255.0/255 alpha:1];
         [self addSubview:self.pageVC];
         
         self.time = 3.0;

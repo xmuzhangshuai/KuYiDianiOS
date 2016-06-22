@@ -90,7 +90,10 @@
     [useDef setBool:flag forKey:@"notFirst"];
     [useDef synchronize];
     // 切换根视图控制器
-    self.view.window.rootViewController = [[KDLoginViewController alloc] init];
+//    self.view.window.rootViewController = [[KDLoginViewController alloc] init];
+    KDLoginViewController *login = [[KDLoginViewController alloc] init];
+    [self.navigationController pushViewController:login animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

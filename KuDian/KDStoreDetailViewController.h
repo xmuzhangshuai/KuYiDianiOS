@@ -13,4 +13,7 @@
 /** 对外属性，商家点击的index*/
 @property (nonatomic, strong)NSIndexPath *indexPath;
 
+@property (nonatomic, strong)NSString *storeName;
+
+
 @end

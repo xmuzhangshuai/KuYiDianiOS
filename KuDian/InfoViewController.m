@@ -10,6 +10,9 @@
 #import "KDLoginViewController.h"
 #import "KDMarkViewController.h"
 #import "KDMainViewController.h"
+#import "KDPersonalCenterViewController.h"
+#import "KDScoreViewController.h"
+#import "ShareViewController.h"
 
 #import "UISize.h"
 #import "AppDelegate.h"
@@ -28,15 +31,16 @@
     UIImageView *logoImageView;
     UIImageView *avatarImage;
     NSArray     *listArray;
-    
-    /** 是否已开通大象会员*/
-    UIButton *ElephantMemberButton;
-    UIImageView *AdImageView;
+    NSArray     *imageArray;
     
     AppDelegate *myAppDelegate;
     NSUserDefaults *userDefaults;
     
     UILabel     *phoneNumberLabel;  // 电话label
+    
+    //退出登录按钮
+    UIButton *logOutBtn;
+    
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -66,11 +70,11 @@
     userDefaults            = [NSUserDefaults standardUserDefaults];
     phoneNumberLabel        = [[UILabel alloc] init];
     
-    /** 会员按钮*/
-    ElephantMemberButton    = [UIButton buttonWithType:UIButtonTypeCustom];
-    AdImageView             = [[UIImageView alloc] init];
+    logOutBtn               = [[UIButton alloc] init];
     
-     listArray               = @[@"主页", @"我的收藏", @"我的积分", @"分享", @"帮助中心", @"定时器", @"登出"];
+     listArray               = @[@"主页", @"我的收藏", @"我的积分", @"闹钟", @"帮助", @"分享", @"设置"];
+    imageArray              = @[@"main", @"love", @"N", @"warn", @"help", @"share", @"setting"];
+    
     
     [self NavigationInit];
     [self UILayout];
@@ -86,37 +90,58 @@
     [self.view addSubview:nameLabel];
     [self.view addSubview:identificationLabel];
     [self.view addSubview:infoTableView];
+    [self.view addSubview:logOutBtn];
     
     avatarImage.frame = CGRectMake(0, 0, AVATARIMAGE_WIDTH, AVATARIMAGE_HEIGHT);
     avatarImage.center = CGPointMake(0.13*SCREEN_WIDTH, 0.11*SCREEN_HEIGHT);
-    avatarImage.image = [UIImage imageNamed:@"1"];
+    avatarImage.image = [UIImage imageNamed:@"head"];
     // 将方形图片剪裁成圆的
     avatarImage.layer.masksToBounds = YES;
     avatarImage.layer.cornerRadius = AVATARIMAGE_WIDTH/2;
 
-    nameLabel.frame = CGRectMake(0.23*SCREEN_WIDTH, 0.05*SCREEN_HEIGHT, NAMELABEL_WIDTH, NAMELABEL_HEIGHT);
+    nameLabel.frame = CGRectMake(0.23*SCREEN_WIDTH, 0.06*SCREEN_HEIGHT, NAMELABEL_WIDTH, NAMELABEL_HEIGHT);
     NSLog(@"identity:%d", myAppDelegate.isIdentify);
     if (myAppDelegate.isIdentify) {
         nameLabel.text = [userDefaults objectForKey:@"name"];
     }else {
         nameLabel.text = @"刘云";
     }
+    [nameLabel setTextColor:[UIColor colorWithRed:201.0/255 green:202.0/255 blue:203.0/255 alpha:1]];
 
     nameLabel.textAlignment = NSTextAlignmentLeft;
     
-    identificationLabel.frame = CGRectMake(0.23*SCREEN_WIDTH, 0.09*SCREEN_HEIGHT, IDENTIFICATIONLABEL_WIDTH, IDENTIFICATIONLABEL_HEIGHT);
+    identificationLabel.frame = CGRectMake(0.23*SCREEN_WIDTH, 0.1*SCREEN_HEIGHT, IDENTIFICATIONLABEL_WIDTH, IDENTIFICATIONLABEL_HEIGHT);
     if (myAppDelegate.isIdentify) {
         identificationLabel.text = [NSString stringWithFormat:@"%@", [userDefaults objectForKey:@"college"]];
     }else {
         identificationLabel.text = @"厦门大学";
     }
     identificationLabel.textAlignment = NSTextAlignmentLeft;
+    [identificationLabel setTextColor:[UIColor colorWithRed:201.0/255 green:202.0/255 blue:203.0/255 alpha:1]];
     
     infoTableView.frame = CGRectMake(0, 0.25*SCREEN_HEIGHT, INFOTABLEVIEW_WIDTH, INFOTABLEVIEW_HEIGHT);
     infoTableView.dataSource = self;
     infoTableView.delegate = self;
     infoTableView.scrollEnabled = NO;
-   
+    
+    
+    logOutBtn.frame = CGRectMake(0, 0.95*SCREEN_HEIGHT, SCREEN_WIDTH*0.8666, 0.05*SCREEN_HEIGHT);
+    [logOutBtn addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
+    [logOutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+//    //边框宽度
+//    logOutBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+//    [logOutBtn.layer setBorderWidth:1.0];
+    logOutBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    logOutBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    [logOutBtn setTitleColor:[UIColor colorWithRed:201.0/255 green:202.0/255 blue:203.0/255 alpha:1] forState:UIControlStateNormal];
+    logOutBtn.backgroundColor = [UIColor colorWithRed:64.0/255 green:64.0/255 blue:63.0/255 alpha:1];
+    
+}
+
+#pragma mark - button event
+-(void)logout {
+    //登出,回到登录界面
+    [self.delegate removeFromSuperView:YES];
 }
 
 
@@ -135,16 +160,14 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
+    cell.contentView.backgroundColor = [UIColor colorWithRed:64.0/255 green:64.0/255 blue:63.0/255 alpha:1];
+    [cell.textLabel setTextColor:[UIColor colorWithRed:201.0/255 green:202.0/255 blue:203.0/255 alpha:1]];
+    cell.imageView.image = [UIImage imageNamed:imageArray[indexPath.row]];
+    
     cell.textLabel.text = [listArray objectAtIndex:indexPath.row];
-    NSLog(@"indexpath.row:%ld", (long)indexPath.row);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-
-    if (indexPath.row == 2) {
-        NSString *str = [@"余额:" stringByAppendingString:@"100"];
-        NSString *str1 = [str stringByAppendingString:@"分"];
-        cell.detailTextLabel.text = str1;
-    }
+    [cell.detailTextLabel setTextColor:[UIColor colorWithRed:201.0/255 green:202.0/255 blue:203.0/255 alpha:1]];
+    
     return cell;
 }
 
@@ -163,31 +186,34 @@
             //收藏界面
             KDMarkViewController *mark = [[KDMarkViewController alloc] init];
             [self.delegate getNextViewController:mark];
+
         }
             break;
         case 2:{
-            //我的积分界面
-            
+            //我的积分
+            KDScoreViewController *score = [[KDScoreViewController alloc] init];
+            [self.delegate getNextViewController:score];
         }
             break;
         case 3:{
-            //分享界面
-            
-        }
-            break;
-        case 4:{
-            //帮助中心
+            //闹钟
            
         }
             break;
-        case 5:{
-            //定时器
+        case 4:{
+            //帮助
             
         }
             break;
+        case 5:{
+            //分享
+            ShareViewController *share = [[ShareViewController alloc] init];
+            [self.delegate getNextViewController:share];
+        }
+            break;
         case 6:{
-        //登出,回到登录界面
-            [self.delegate removeFromSuperView:YES];
+            //设置
+            
         }
             break;
         default:
@@ -195,40 +221,9 @@
     }
 }
 
-//获取当前正在显示的viewController
-- (UIViewController *)getCurrentVC
-{
-    UIViewController *result = nil;
-    
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
-        }
-    }
-    
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-        result = nextResponder;
-    else
-        result = window.rootViewController;
-    
-    return result;
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithRed:64.0/255 green:64.0/255 blue:63.0/255 alpha:1];
     [self UIInit];
 }
 

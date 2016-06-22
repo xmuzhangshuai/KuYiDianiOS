@@ -12,6 +12,7 @@
 
 #import "UISize.h"
 #import "KDADScrollView.h"
+#import "KDLocalScrollView.h"
 #import "KDMainCollectionViewCell.h"
 #import "Masonry.h"
 #import "KDStoreViewController.h"
@@ -19,8 +20,14 @@
 #import "KDLaProductViewController.h"
 #import "KDMarkViewController.h"
 #import "KDChartsViewController.h"
+#import "KDPersonalCenterViewController.h"
+#import "KDScoreViewController.h"
+#import "KDRecommandViewController.h"
 
 #define  Demo1CellID @"demo1_cell_id"
+#define  ADScrollView_HEIGHT 0.127*SCREEN_HEIGHT
+#define  LocalScrollView_HEIGHT 0.087*SCREEN_HEIGHT
+#define  LABEL_HEIGHT 0.018*SCREEN_HEIGHT
 
 @interface KDMainViewController ()<InfoViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -37,7 +44,10 @@
     
     //collection的类别名称
     NSArray *typeNameArray;
+    NSMutableArray *typeImageArray;
     
+    //附近商家的图片数组
+    NSMutableArray *localImageNameArray;
     
 }
 
@@ -48,14 +58,24 @@
         for (int i = 5; i < 10; i++) {
             [ADImageArr addObject:[NSString stringWithFormat:@"%d.jpg", i]];
         }
+        localImageNameArray = [[NSMutableArray alloc] init];
+        for (int i = 1; i < 5; i++) {
+            [localImageNameArray addObject:[NSString stringWithFormat:@"LocalStore%d.jpg", i]];
+        }
+        typeImageArray = [[NSMutableArray alloc] init];
+        for (int i = 1; i < 7; i++) {
+            [typeImageArray addObject:[NSString stringWithFormat:@"mainView%d", i]];
+        }
+        
         typeNameArray = @[@"商家列表", @"最新商品", @"地图", @"收藏", @"排行榜", @"酷易点推荐"];
+        
     }
     return self;
 }
 
 -(void)UIInit {
     self.view.backgroundColor = [UIColor whiteColor];
-    
+   
     //侧拉栏
     cover           = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     cover.hidden = YES;
@@ -74,38 +94,64 @@
     leftSwipGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showMenu)];
     [self.view addGestureRecognizer:leftSwipGestureRecognizer];
     
-    
     [self navigationInit];
    [self UILayout];
 }
 
 -(void)navigationInit {
+    
+     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:198.0/255 green:238.0/255 blue:239.0/255 alpha:1]];
+    //Logo
+    UIImageView *titleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30, 20, 0.15*SCREEN_WIDTH, 0.05*SCREEN_HEIGHT)];
+    titleImageView.image = [UIImage imageNamed:@"kuyidian"];
+    titleImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = titleImageView;
+    //侧拉栏
     UIBarButtonItem *sideButton;
-    sideButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"个人中心"] style:UIBarButtonItemStylePlain target:self action:@selector(information)];
-    sideButton.tintColor = [UIColor grayColor];
+    sideButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backmain"] style:UIBarButtonItemStylePlain target:self action:@selector(information)];
+    sideButton.tintColor = [UIColor colorWithRed:75.0/255 green:73.0/255 blue:70.0/255 alpha:1];
+    
+    //跳转到个人中心界面
+    UIBarButtonItem *personalButton;
+    personalButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"personalmain"] style:UIBarButtonItemStylePlain target:self action:@selector(getToPersonal)];
+    personalButton.tintColor = [UIColor colorWithRed:75.0/255 green:73.0/255 blue:70.0/255 alpha:1];
+
+    self.navigationItem.rightBarButtonItem = personalButton;
     self.navigationItem.leftBarButtonItem = sideButton;
+    
 }
 
 -(void)UILayout {
-    //布局上面有待改变
-    KDADScrollView *adScrollView = [KDADScrollView direcWithtFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.2*SCREEN_HEIGHT) ImageArr:ADImageArr AndImageClickBlock:^(NSInteger index) {
+    KDADScrollView *adScrollView = [KDADScrollView direcWithtFrame:CGRectMake(0, 0, SCREEN_WIDTH, ADScrollView_HEIGHT) ImageArr:ADImageArr AndImageClickBlock:^(NSInteger index) {
         NSLog(@"当前按中:...%ld", index);
     }];
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(0, ADScrollView_HEIGHT, SCREEN_WIDTH, LABEL_HEIGHT);
+    label.text = @"附近商家";
+    [label setFont:[UIFont systemFontOfSize:10]];
+    
+    KDLocalScrollView *localScrollView = [KDLocalScrollView localScrollViewWithFrame:CGRectMake(0, label.frame.origin.y+LABEL_HEIGHT, SCREEN_WIDTH, LocalScrollView_HEIGHT) ImageArr:localImageNameArray andClickScrollViewBlock:^(NSInteger index) {
+            NSLog(@"当前按中:....%ld", index);
+        }];
+    [self.view addSubview:localScrollView];
     [self.view addSubview:adScrollView];
+    [self.view addSubview:label];
     
     //UIcollection 分类
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-//    flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH/2-5, SCREEN_WIDTH/2-5);
-    flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH/2, (0.8*SCREEN_HEIGHT)/3.4);
+    flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH/2, 0.218*SCREEN_HEIGHT);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     flowLayout.minimumLineSpacing = 0;//设置每个item之间的间距
     flowLayout.minimumInteritemSpacing = 0;
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, adScrollView.frame.size.height, SCREEN_WIDTH, 0.8*SCREEN_HEIGHT) collectionViewLayout:flowLayout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, localScrollView.frame.origin.y+LocalScrollView_HEIGHT+LABEL_HEIGHT, SCREEN_WIDTH, 0.8*SCREEN_HEIGHT) collectionViewLayout:flowLayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
-    collectionView.showsVerticalScrollIndicator = YES;
-    collectionView.backgroundColor = [UIColor whiteColor];
+    //设置滑动
+//    collectionView.showsVerticalScrollIndicator = YES;
+//    collectionView.backgroundColor = [UIColor whiteColor];
+//    collectionView.alwaysBounceVertical = YES;
+    
     [self.view addSubview:collectionView];
     
     _collectionView=collectionView;
@@ -117,17 +163,20 @@
     
     
     [self.collectionView registerClass:[KDMainCollectionViewCell class] forCellWithReuseIdentifier:Demo1CellID];
-
-    
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self UIInit];
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
+#pragma mark - 个人中心
+-(void)getToPersonal {
+    KDScoreViewController *score = [[KDScoreViewController alloc] init];
+    [self.navigationController pushViewController:score animated:YES];
+}
 
 #pragma mark - Button Event侧拉栏
 /** 隐藏遮罩层，左滑隐藏侧栏*/
@@ -196,7 +245,7 @@
 -(void)removeFromSuperView:(BOOL)isLogOut {
     [self hiddenCover];
     if (isLogOut) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:NO];
     }
 }
 
@@ -215,7 +264,38 @@
     if(!cell){
         cell = [[KDMainCollectionViewCell alloc] init];
     }
-    [cell setImageName:[NSString stringWithFormat:@"2_full"] andContent:typeNameArray[indexPath.row]];
+    [cell setImageName:typeImageArray[indexPath.row] andContent:typeNameArray[indexPath.row]];
+    
+    
+    switch (indexPath.row) {
+        case 0:{
+            cell.contentView.backgroundColor = [UIColor colorWithRed:245.0/255 green:164.0/255 blue:160.0/255 alpha:1];
+        }
+            break;
+        case 1:{
+            cell.contentView.backgroundColor = [UIColor colorWithRed:215.0/255 green:238.0/255 blue:220.0/255 alpha:1];
+        }
+            break;
+        case 2:{
+            cell.contentView.backgroundColor = [UIColor colorWithRed:248.0/255 green:246.0/255 blue:233.0/255 alpha:1];
+        }
+            break;
+        case 3:{
+            cell.contentView.backgroundColor = [UIColor colorWithRed:156.0/255 green:136.0/255 blue:129.0/255 alpha:1];
+        }
+            break;
+        case 4:{
+            cell.contentView.backgroundColor = [UIColor colorWithRed:198.0/255 green:238.0/255 blue:239.0/255 alpha:1];
+        }
+            break;
+        case 5:{
+            cell.contentView.backgroundColor = [UIColor colorWithRed:203.0/255 green:219.0/255 blue:242.0/255 alpha:1];
+        }
+            break;
+        default:
+            break;
+    }
+    
     return cell;
 }
 
@@ -253,6 +333,8 @@
             break;
         case 5:{
             //酷易点推荐
+            KDRecommandViewController *recommand = [[KDRecommandViewController alloc] init];
+            [self.navigationController pushViewController:recommand animated:YES];
         }
             break;
         default:

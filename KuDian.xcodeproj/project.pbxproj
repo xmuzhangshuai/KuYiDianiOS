@@ -35,9 +35,23 @@
 		3D9A0B651CFD265C0098DF1B /* KuDianUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B641CFD265C0098DF1B /* KuDianUITests.m */; };
 		3D9A0B7C1CFD37670098DF1B /* KDLeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B7B1CFD37670098DF1B /* KDLeadViewController.m */; };
 		3D9A0B801CFD37E40098DF1B /* KDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A0B7F1CFD37E40098DF1B /* KDLoginViewController.m */; };
+		3DBE9D761D0E7BB2008936E3 /* KDScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBE9D751D0E7BB2008936E3 /* KDScoreViewController.m */; };
+		3DBE9D7E1D0FA333008936E3 /* KDLocalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBE9D7D1D0FA332008936E3 /* KDLocalScrollView.m */; };
+		3DD338701D0D6C5400EEB08A /* KDPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3386F1D0D6C5400EEB08A /* KDPersonalCenterViewController.m */; };
 		8FA02E51A55D65AEDA71CF64 /* libPods-KuDian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78992B65C02EF581C14B071D /* libPods-KuDian.a */; };
+		C0267D861D0DB50200843885 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0267D841D0DB50200843885 /* StoreTableViewCell.m */; };
+		C0267D891D0DBC3C00843885 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0267D881D0DBC3C00843885 /* StoreTableViewCell.xib */; };
 		C02A707D1D045E3200473D07 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02A707C1D045E3200473D07 /* InfoViewController.m */; };
 		C0AC99551D072DC7007D9E70 /* KDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AC99541D072DC7007D9E70 /* KDLoginViewController.xib */; };
+		E2127A161D17102F006D4B0C /* StoreDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2127A151D17102F006D4B0C /* StoreDetailTableViewCell.m */; };
+		E2127A191D1722B8006D4B0C /* MarkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2127A181D1722B8006D4B0C /* MarkTableViewCell.m */; };
+		E2127A1C1D173B50006D4B0C /* chartsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2127A1B1D173B50006D4B0C /* chartsTableViewCell.m */; };
+		E2127A221D17A323006D4B0C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2127A211D17A323006D4B0C /* ShareViewController.m */; };
+		E21C98F41D131DF800CB0C71 /* KDSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C98F31D131DF800CB0C71 /* KDSignUpViewController.m */; };
+		E21C98F61D131E9700CB0C71 /* KDSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21C98F51D131E9700CB0C71 /* KDSignUpViewController.xib */; };
+		E2EAB98B1D17EDFD0008837B /* KDRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EAB98A1D17EDFD0008837B /* KDRecommandViewController.m */; };
+		E2EAB98F1D184C1F0008837B /* ForgetPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EAB98D1D184C1F0008837B /* ForgetPassWordViewController.m */; };
+		E2EAB9901D184C1F0008837B /* ForgetPassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2EAB98E1D184C1F0008837B /* ForgetPassWordViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,10 +120,35 @@
 		3D9A0B7B1CFD37670098DF1B /* KDLeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLeadViewController.m; sourceTree = "<group>"; };
 		3D9A0B7E1CFD37E40098DF1B /* KDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoginViewController.h; sourceTree = "<group>"; };
 		3D9A0B7F1CFD37E40098DF1B /* KDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLoginViewController.m; sourceTree = "<group>"; };
+		3DBE9D741D0E7BB2008936E3 /* KDScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDScoreViewController.h; sourceTree = "<group>"; };
+		3DBE9D751D0E7BB2008936E3 /* KDScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDScoreViewController.m; sourceTree = "<group>"; };
+		3DBE9D7C1D0FA331008936E3 /* KDLocalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLocalScrollView.h; sourceTree = "<group>"; };
+		3DBE9D7D1D0FA332008936E3 /* KDLocalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDLocalScrollView.m; sourceTree = "<group>"; };
+		3DD3386E1D0D6C5400EEB08A /* KDPersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDPersonalCenterViewController.h; sourceTree = "<group>"; };
+		3DD3386F1D0D6C5400EEB08A /* KDPersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDPersonalCenterViewController.m; sourceTree = "<group>"; };
 		78992B65C02EF581C14B071D /* libPods-KuDian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KuDian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0267D831D0DB50200843885 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
+		C0267D841D0DB50200843885 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
+		C0267D881D0DBC3C00843885 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		C02A707B1D045E3200473D07 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		C02A707C1D045E3200473D07 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		C0AC99541D072DC7007D9E70 /* KDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KDLoginViewController.xib; sourceTree = "<group>"; };
+		E2127A141D17102F006D4B0C /* StoreDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailTableViewCell.h; sourceTree = "<group>"; };
+		E2127A151D17102F006D4B0C /* StoreDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailTableViewCell.m; sourceTree = "<group>"; };
+		E2127A171D1722B8006D4B0C /* MarkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkTableViewCell.h; sourceTree = "<group>"; };
+		E2127A181D1722B8006D4B0C /* MarkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkTableViewCell.m; sourceTree = "<group>"; };
+		E2127A1A1D173B50006D4B0C /* chartsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chartsTableViewCell.h; sourceTree = "<group>"; };
+		E2127A1B1D173B50006D4B0C /* chartsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chartsTableViewCell.m; sourceTree = "<group>"; };
+		E2127A201D17A323006D4B0C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		E2127A211D17A323006D4B0C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		E21C98F21D131DF800CB0C71 /* KDSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDSignUpViewController.h; sourceTree = "<group>"; };
+		E21C98F31D131DF800CB0C71 /* KDSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDSignUpViewController.m; sourceTree = "<group>"; };
+		E21C98F51D131E9700CB0C71 /* KDSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KDSignUpViewController.xib; sourceTree = "<group>"; };
+		E2EAB9891D17EDFD0008837B /* KDRecommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDRecommandViewController.h; sourceTree = "<group>"; };
+		E2EAB98A1D17EDFD0008837B /* KDRecommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDRecommandViewController.m; sourceTree = "<group>"; };
+		E2EAB98C1D184C1F0008837B /* ForgetPassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassWordViewController.h; sourceTree = "<group>"; };
+		E2EAB98D1D184C1F0008837B /* ForgetPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassWordViewController.m; sourceTree = "<group>"; };
+		E2EAB98E1D184C1F0008837B /* ForgetPassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPassWordViewController.xib; sourceTree = "<group>"; };
 		EC2E439D63746F4CD61583F8 /* Pods-KuDian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuDian.release.xcconfig"; path = "Pods/Target Support Files/Pods-KuDian/Pods-KuDian.release.xcconfig"; sourceTree = "<group>"; };
 		F530376F1E9013AF99F69DC5 /* Pods-KuDian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuDian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KuDian/Pods-KuDian.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,24 +284,10 @@
 		3D9A0B731CFD2DCC0098DF1B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3D5DB9201CFD8437006A445B /* KDMainViewController.h */,
-				3D5DB9211CFD8437006A445B /* KDMainViewController.m */,
-				3D5867531D015BA800A7E007 /* KDMainCollectionViewCell.h */,
-				3D5867541D015BA800A7E007 /* KDMainCollectionViewCell.m */,
-				3D58670B1D003D2B00A7E007 /* KDADScrollView.h */,
-				3D58670C1D003D2B00A7E007 /* KDADScrollView.m */,
-				3D5867561D01779C00A7E007 /* KDStoreViewController.h */,
-				3D5867571D01779C00A7E007 /* KDStoreViewController.m */,
-				3D5867651D017C7B00A7E007 /* KDStoreDetailViewController.h */,
-				3D5867661D017C7B00A7E007 /* KDStoreDetailViewController.m */,
-				3D5867591D0177BF00A7E007 /* KDMapViewController.h */,
-				3D58675A1D0177BF00A7E007 /* KDMapViewController.m */,
-				3D58675F1D01797D00A7E007 /* KDLaProductViewController.h */,
-				3D5867601D01797D00A7E007 /* KDLaProductViewController.m */,
-				3D58675C1D01787600A7E007 /* KDMarkViewController.h */,
-				3D58675D1D01787600A7E007 /* KDMarkViewController.m */,
-				3D5867621D0179E500A7E007 /* KDChartsViewController.h */,
-				3D5867631D0179E500A7E007 /* KDChartsViewController.m */,
+				E2127A1F1D17A29B006D4B0C /* Model */,
+				E2127A1E1D17A28E006D4B0C /* Controllers */,
+				E2127A1D1D17A27F006D4B0C /* View */,
+				3DD338711D0D6DFE00EEB08A /* MainView */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -275,6 +300,12 @@
 				C0AC99541D072DC7007D9E70 /* KDLoginViewController.xib */,
 				3D360E2B1D07AECF0069C77E /* KDAccessViewController.h */,
 				3D360E2C1D07AECF0069C77E /* KDAccessViewController.m */,
+				E21C98F21D131DF800CB0C71 /* KDSignUpViewController.h */,
+				E21C98F31D131DF800CB0C71 /* KDSignUpViewController.m */,
+				E21C98F51D131E9700CB0C71 /* KDSignUpViewController.xib */,
+				E2EAB98C1D184C1F0008837B /* ForgetPassWordViewController.h */,
+				E2EAB98D1D184C1F0008837B /* ForgetPassWordViewController.m */,
+				E2EAB98E1D184C1F0008837B /* ForgetPassWordViewController.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -296,6 +327,21 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		3DD338711D0D6DFE00EEB08A /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3D5DB9201CFD8437006A445B /* KDMainViewController.h */,
+				3D5DB9211CFD8437006A445B /* KDMainViewController.m */,
+				3D5867531D015BA800A7E007 /* KDMainCollectionViewCell.h */,
+				3D5867541D015BA800A7E007 /* KDMainCollectionViewCell.m */,
+				3D58670B1D003D2B00A7E007 /* KDADScrollView.h */,
+				3D58670C1D003D2B00A7E007 /* KDADScrollView.m */,
+				3DBE9D7C1D0FA331008936E3 /* KDLocalScrollView.h */,
+				3DBE9D7D1D0FA332008936E3 /* KDLocalScrollView.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
 		67B6C5C375281E28D9A25FDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +349,56 @@
 				EC2E439D63746F4CD61583F8 /* Pods-KuDian.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2127A1D1D17A27F006D4B0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0267D831D0DB50200843885 /* StoreTableViewCell.h */,
+				C0267D841D0DB50200843885 /* StoreTableViewCell.m */,
+				C0267D881D0DBC3C00843885 /* StoreTableViewCell.xib */,
+				E2127A141D17102F006D4B0C /* StoreDetailTableViewCell.h */,
+				E2127A151D17102F006D4B0C /* StoreDetailTableViewCell.m */,
+				E2127A171D1722B8006D4B0C /* MarkTableViewCell.h */,
+				E2127A181D1722B8006D4B0C /* MarkTableViewCell.m */,
+				E2127A1A1D173B50006D4B0C /* chartsTableViewCell.h */,
+				E2127A1B1D173B50006D4B0C /* chartsTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E2127A1E1D17A28E006D4B0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DD3386E1D0D6C5400EEB08A /* KDPersonalCenterViewController.h */,
+				3DD3386F1D0D6C5400EEB08A /* KDPersonalCenterViewController.m */,
+				3DBE9D741D0E7BB2008936E3 /* KDScoreViewController.h */,
+				3DBE9D751D0E7BB2008936E3 /* KDScoreViewController.m */,
+				3D5867561D01779C00A7E007 /* KDStoreViewController.h */,
+				3D5867571D01779C00A7E007 /* KDStoreViewController.m */,
+				3D5867651D017C7B00A7E007 /* KDStoreDetailViewController.h */,
+				3D5867661D017C7B00A7E007 /* KDStoreDetailViewController.m */,
+				3D5867591D0177BF00A7E007 /* KDMapViewController.h */,
+				3D58675A1D0177BF00A7E007 /* KDMapViewController.m */,
+				3D58675F1D01797D00A7E007 /* KDLaProductViewController.h */,
+				3D5867601D01797D00A7E007 /* KDLaProductViewController.m */,
+				3D58675C1D01787600A7E007 /* KDMarkViewController.h */,
+				3D58675D1D01787600A7E007 /* KDMarkViewController.m */,
+				3D5867621D0179E500A7E007 /* KDChartsViewController.h */,
+				3D5867631D0179E500A7E007 /* KDChartsViewController.m */,
+				E2127A201D17A323006D4B0C /* ShareViewController.h */,
+				E2127A211D17A323006D4B0C /* ShareViewController.m */,
+				E2EAB9891D17EDFD0008837B /* KDRecommandViewController.h */,
+				E2EAB98A1D17EDFD0008837B /* KDRecommandViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E2127A1F1D17A29B006D4B0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,9 +509,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D9A0B4F1CFD265C0098DF1B /* LaunchScreen.storyboard in Resources */,
+				C0267D891D0DBC3C00843885 /* StoreTableViewCell.xib in Resources */,
+				E2EAB9901D184C1F0008837B /* ForgetPassWordViewController.xib in Resources */,
 				3D9A0B4C1CFD265C0098DF1B /* Assets.xcassets in Resources */,
 				3D9A0B4A1CFD265C0098DF1B /* Main.storyboard in Resources */,
 				C0AC99551D072DC7007D9E70 /* KDLoginViewController.xib in Resources */,
+				E21C98F61D131E9700CB0C71 /* KDSignUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,16 +589,27 @@
 			files = (
 				3D58675B1D0177BF00A7E007 /* KDMapViewController.m in Sources */,
 				3D5867551D015BA900A7E007 /* KDMainCollectionViewCell.m in Sources */,
+				3DBE9D7E1D0FA333008936E3 /* KDLocalScrollView.m in Sources */,
+				E2EAB98B1D17EDFD0008837B /* KDRecommandViewController.m in Sources */,
+				E2127A191D1722B8006D4B0C /* MarkTableViewCell.m in Sources */,
+				C0267D861D0DB50200843885 /* StoreTableViewCell.m in Sources */,
 				3D5867671D017C7B00A7E007 /* KDStoreDetailViewController.m in Sources */,
 				3D5867611D01797D00A7E007 /* KDLaProductViewController.m in Sources */,
+				E2127A1C1D173B50006D4B0C /* chartsTableViewCell.m in Sources */,
 				3D5867641D0179E500A7E007 /* KDChartsViewController.m in Sources */,
 				3D9A0B441CFD265B0098DF1B /* AppDelegate.mm in Sources */,
 				3D9A0B801CFD37E40098DF1B /* KDLoginViewController.m in Sources */,
 				3D58670D1D003D2B00A7E007 /* KDADScrollView.m in Sources */,
 				C02A707D1D045E3200473D07 /* InfoViewController.m in Sources */,
+				E2EAB98F1D184C1F0008837B /* ForgetPassWordViewController.m in Sources */,
+				E2127A161D17102F006D4B0C /* StoreDetailTableViewCell.m in Sources */,
 				3D5867581D01779C00A7E007 /* KDStoreViewController.m in Sources */,
 				3D58675E1D01787600A7E007 /* KDMarkViewController.m in Sources */,
 				3D5DB9221CFD8437006A445B /* KDMainViewController.m in Sources */,
+				E2127A221D17A323006D4B0C /* ShareViewController.m in Sources */,
+				3DD338701D0D6C5400EEB08A /* KDPersonalCenterViewController.m in Sources */,
+				E21C98F41D131DF800CB0C71 /* KDSignUpViewController.m in Sources */,
+				3DBE9D761D0E7BB2008936E3 /* KDScoreViewController.m in Sources */,
 				3D9A0B7C1CFD37670098DF1B /* KDLeadViewController.m in Sources */,
 				3D360E2D1D07AECF0069C77E /* KDAccessViewController.m in Sources */,
 				3D9A0B411CFD265B0098DF1B /* main.m in Sources */,
@@ -647,12 +757,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = KuDian/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -662,12 +774,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = KuDian/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxn.KuDian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

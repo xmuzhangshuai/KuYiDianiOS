@@ -11,8 +11,8 @@
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
 #import "KDMainViewController.h"
-
-
+#import "KDSignUpViewController.h"
+#import "ForgetPassWordViewController.h"
 
 @interface KDLoginViewController ()<UITextFieldDelegate, MBProgressHUDDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *LoginNameTextField;
@@ -22,12 +22,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *SignUpBtn;
 @property (weak, nonatomic) IBOutlet UIButton *WechatLoginBtn;
 
+
 @end
 
 @implementation KDLoginViewController {
     AppDelegate     *MyAppDelegate;
-    
-
 }
 
 -(instancetype)init {
@@ -39,7 +38,8 @@
 
 
 - (void)UIInit {
-    
+    self.LoginNameTextField.textColor = [UIColor whiteColor];
+    self.LoginPassWordTextField.textColor = [UIColor whiteColor];
 }
 
 - (void)viewDidLoad {
@@ -74,11 +74,13 @@
 
 #pragma mark - ButtonEvent
 - (IBAction)ForgetPassWord:(id)sender {
-    
+    ForgetPassWordViewController *forgetVc = [[ForgetPassWordViewController alloc] init];
+    [self.navigationController pushViewController:forgetVc animated:YES];
 }
 /** 注册*/
 - (IBAction)SignUp:(id)sender {
-    
+    KDSignUpViewController *signUp = [[KDSignUpViewController alloc] init];
+    [self.navigationController pushViewController:signUp animated:YES];
 }
 /** 第三方登录*/
 - (IBAction)WeChatLogin:(id)sender {
@@ -93,14 +95,16 @@
     hud.dimBackground = YES;
     [hud hide:YES afterDelay:1];
 }
-/** 用户名*/
-- (IBAction)TextFieldChange:(id)sender {
-    NSLog(@"NameTextField发生了改变");
+
+- (IBAction)LoginPassWord:(UITextField *)sender {
+    
 }
-/** 密码*/
-- (IBAction)passWordTextFieldChange:(id)sender {
-    NSLog(@"passWordTextField发生了改变");
+- (IBAction)LoginNameEdit:(UITextField *)sender {
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

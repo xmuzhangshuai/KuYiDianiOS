@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0yc-sR-Xe6" customClass="StoreTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storeImage1" translatesAutoresizingMaskIntoConstraints="NO" id="39O-0O-UnE">
+                    <rect key="frame" x="10" y="10" width="60" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Nf2-LY-fWw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肯德基" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnm-fU-qiy">
+                    <rect key="frame" x="110" y="10" width="290" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="c28-yZ-Xzk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：厦门市思明区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxg-3E-E4j">
+                    <rect key="frame" x="110" y="50" width="250" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="9Fu-oj-03n"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-L0-cEA">
+                    <rect key="frame" x="360" y="30" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="3rn-mJ-OER"/>
+                        <constraint firstAttribute="height" constant="30" id="LMN-2n-O9F"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="storeAnnotation"/>
+                    <state key="selected" backgroundImage="highLightAnnotation"/>
+                    <state key="highlighted" backgroundImage="highLightAnnotation"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品数量：288" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-iT-XJX">
+                    <rect key="frame" x="110" y="65" width="290" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="P9h-jQ-Jv8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oT2-iT-XJX" firstAttribute="top" secondItem="Xxg-3E-E4j" secondAttribute="bottom" id="55s-Ef-xAM"/>
+                <constraint firstAttribute="trailing" secondItem="eqa-L0-cEA" secondAttribute="trailing" constant="10" id="AHN-vb-VrN"/>
+                <constraint firstAttribute="bottom" secondItem="39O-0O-UnE" secondAttribute="bottom" constant="10" id="Fnp-uw-AAt"/>
+                <constraint firstItem="Xxg-3E-E4j" firstAttribute="top" secondItem="Hnm-fU-qiy" secondAttribute="bottom" constant="20" id="HAs-gG-Oas"/>
+                <constraint firstItem="Hnm-fU-qiy" firstAttribute="leading" secondItem="39O-0O-UnE" secondAttribute="trailing" constant="40" id="Rv1-ku-tMf"/>
+                <constraint firstItem="Hnm-fU-qiy" firstAttribute="top" secondItem="0yc-sR-Xe6" secondAttribute="top" constant="10" id="UHk-rV-cW9"/>
+                <constraint firstAttribute="trailing" secondItem="oT2-iT-XJX" secondAttribute="trailing" id="XmR-Gm-suu"/>
+                <constraint firstItem="39O-0O-UnE" firstAttribute="leading" secondItem="0yc-sR-Xe6" secondAttribute="leading" constant="10" id="ZZv-mv-tKU"/>
+                <constraint firstItem="eqa-L0-cEA" firstAttribute="leading" secondItem="Xxg-3E-E4j" secondAttribute="trailing" id="Zah-q9-byU"/>
+                <constraint firstAttribute="trailing" secondItem="Hnm-fU-qiy" secondAttribute="trailing" id="Zr3-Zs-cdR"/>
+                <constraint firstItem="oT2-iT-XJX" firstAttribute="leading" secondItem="Xxg-3E-E4j" secondAttribute="leading" id="jrh-dw-JRT"/>
+                <constraint firstItem="Xxg-3E-E4j" firstAttribute="leading" secondItem="Hnm-fU-qiy" secondAttribute="leading" id="kC8-7R-QE6"/>
+                <constraint firstItem="eqa-L0-cEA" firstAttribute="top" secondItem="Hnm-fU-qiy" secondAttribute="bottom" id="w5W-6J-Q7P"/>
+                <constraint firstItem="39O-0O-UnE" firstAttribute="top" secondItem="0yc-sR-Xe6" secondAttribute="top" constant="10" id="ydH-fj-pTU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="AdressLabel" destination="Xxg-3E-E4j" id="f6P-DD-diz"/>
+                <outlet property="MarkImageButton" destination="eqa-L0-cEA" id="vTC-wV-gsW"/>
+                <outlet property="NumOfProductLabel" destination="oT2-iT-XJX" id="ygC-OM-mBJ"/>
+                <outlet property="StoreImageView" destination="39O-0O-UnE" id="u7q-Xx-QUk"/>
+                <outlet property="StoreNameLabel" destination="Hnm-fU-qiy" id="89h-VC-vKx"/>
+            </connections>
+            <point key="canvasLocation" x="404" y="366"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="highLightAnnotation" width="21" height="26"/>
+        <image name="storeAnnotation" width="21" height="26"/>
+        <image name="storeImage1" width="63" height="63"/>
+    </resources>
+</document>

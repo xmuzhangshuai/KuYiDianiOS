@@ -38,8 +38,11 @@
         // 否则直接进入应用
         navigationController = [[UINavigationController alloc] initWithRootViewController:[[KDLoginViewController alloc] init]];
     }
-    
-    
+//    //全局设置导航栏的样式,背景图片
+//    UINavigationBar * appearance = [UINavigationBar appearance];
+//    UIImage *navBackgroundImg =[UIImage imageNamed:@"navClear.png"];
+//    [appearance setBackgroundImage:navBackgroundImg forBarMetrics:UIBarMetricsDefault];
+
     //百度地图
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
